@@ -1,0 +1,476 @@
+[
+    {
+        "id": "sd_X2EUEUVoSonixpIV",
+        "type": "tab",
+        "createdDate": "2024-05-15T14:36:50.155Z",
+        "label": "signIn",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "signInComponent"
+    },
+    {
+        "id": "sd_nxyIcayG3VA48S4s",
+        "type": "OnInit",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_nxyIcayG3VA48S4s",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 60,
+        "wires": [
+            [
+                "sd_X8SiOUTGlq4CHJep"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "signInComponent"
+    },
+    {
+        "id": "sd_X8SiOUTGlq4CHJep",
+        "type": "PageVariables",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "userDetails",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "{ email: '', password: '' }"
+                }
+            },
+            {
+                "textIp": "hideIcon",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "true"
+                }
+            },
+            {
+                "textIp": "submitted",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "emailPattern",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "/^[^\\s@]+@([^\\s@.,]+\\.)+[^\\s@.,]{2,}$/"
+                }
+            }
+        ],
+        "functionName": "sd_X8SiOUTGlq4CHJep",
+        "category": "Function",
+        "x": 165,
+        "y": 60,
+        "wires": [
+            [
+                "sd_2LEczkYxQur0plUe"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_dDa8Y4LvJX9QDYfr",
+        "type": "PageStart",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "signIn",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "form",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "signIn",
+        "category": "General",
+        "x": 65,
+        "y": 180,
+        "wires": [
+            [
+                "sd_W9CgrjxdV7x2VmRc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "signInComponent"
+    },
+    {
+        "id": "sd_W9CgrjxdV7x2VmRc",
+        "type": "Environment",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh",
+                    "value": "url"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_W9CgrjxdV7x2VmRc",
+        "category": "General",
+        "x": 165,
+        "y": 180,
+        "wires": [
+            [
+                "sd_DuJom0jpHdUK33ds"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_DuJom0jpHdUK33ds",
+        "type": "Script",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.submitted = true;\nbh.url = bh.url + 'admin-log-in';\n// page.loader = true;\nconsole.log(bh.input.form)\nconsole.log(page.userDetails)\n",
+        "functionName": "sd_DuJom0jpHdUK33ds",
+        "category": "Function",
+        "x": 285,
+        "y": 180,
+        "wires": [
+            [
+                "sd_gNR1b9c1Ugt2LbrH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_gNR1b9c1Ugt2LbrH",
+        "type": "PageSwitch",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "form.valid",
+        "propertyType": "bh.input",
+        "propertyGv": "bh.input.form.valid",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_gNR1b9c1Ugt2LbrH",
+        "category": "Function",
+        "x": 385,
+        "y": 180,
+        "wires": [
+            [
+                "sd_bfsbF7gCB0nskEOk"
+            ],
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_bfsbF7gCB0nskEOk",
+        "type": "HttpRequest",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.userDetails",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "userDetails"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_bfsbF7gCB0nskEOk",
+        "category": "HTTP",
+        "x": 485,
+        "y": 180,
+        "wires": [
+            [
+                "sd_aqQu9w6pER2RNoev"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_aqQu9w6pER2RNoev",
+        "type": "SnackBar",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Logged In successfully"
+        },
+        "action": {
+            "type": "str",
+            "value": "OK"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_aqQu9w6pER2RNoev",
+        "category": "General",
+        "x": 580,
+        "y": 120,
+        "wires": [
+            [
+                "sd_5cyvDjiNdvfoWqZ9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5cyvDjiNdvfoWqZ9",
+        "type": "Storage",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "value": {
+            "type": "bh",
+            "value": "result"
+        },
+        "resultMapping": {},
+        "functionName": "sd_5cyvDjiNdvfoWqZ9",
+        "category": "Storage",
+        "x": 665,
+        "y": 120,
+        "wires": [
+            [
+                "sd_F8TqpZLD45b0eL3l"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_F8TqpZLD45b0eL3l",
+        "type": "Navigation",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/landing",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_F8TqpZLD45b0eL3l",
+        "category": "Navigation",
+        "x": 780,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_MSD4NtemhFTzxYES",
+        "type": "HttpRequest",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.collection",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "collection"
+        },
+        "resultMapping": "bh.result",
+        "resultMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_MSD4NtemhFTzxYES",
+        "category": "HTTP",
+        "x": 485,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_2LEczkYxQur0plUe",
+        "type": "Environment",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh",
+                    "value": "url"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_2LEczkYxQur0plUe",
+        "category": "General",
+        "x": 285,
+        "y": 60,
+        "wires": [
+            [
+                "sd_mmOwDDCaEwmDwSEy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mmOwDDCaEwmDwSEy",
+        "type": "Script",
+        "z": "sd_X2EUEUVoSonixpIV",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = bh.url + 'add-admin';\n// console.log(bh.url)\nbh.collection = {collection: 'admin'}",
+        "functionName": "sd_mmOwDDCaEwmDwSEy",
+        "category": "Function",
+        "x": 385,
+        "y": 60,
+        "wires": [
+            [
+                "sd_MSD4NtemhFTzxYES"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "signInComponent",
+        "generated": true
+    }
+]

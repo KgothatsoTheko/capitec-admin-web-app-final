@@ -1,0 +1,90 @@
+<div fxLayout="column wrap" class="full-height" fxLayoutAlign="center stretch" [fxShow]="true" fxFill>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column wrap" class="full-height" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/home/Account Management" onclick="sessionStorage.clear()">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon><span class="material-symbols-outlined"> chevron_left </span></mat-icon></div>
+            <div fxLayout="column wrap" class="on-hover" fxLayoutAlign="center stretch" [fxShow]="true">
+              <div>
+                Back</div>
+            </div>
+          </div>
+          <div style="padding-left:600px;">
+            <strong style="color : rgb(43, 142, 199)">Account Details</strong>
+          </div>
+        </div>
+      </div>
+      <form #accountDetailsForm="ngForm" style="width: 1000px; margin-left:120px; margin-top:70px; height:350px " class="bg-white">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" style="width: 350px;padding:30px" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="row wrap" style="margin-bottom: 45px" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div fxLayout="row wrap" class="round square-50" fxLayoutAlign="start stretch" [fxShow]="true"><img [src]="page.profileImage" crossOrigin="anonymous" class="round square-50"></div>
+                  <div style="padding:10px">
+                    <strong>{{page.userData.firstName}} {{page.userData.lastName}}</strong>
+                  </div>
+                </div>
+                <div>
+                  <!-- <iframe
+  title="Wikipedia page for Avocados"
+  [src]="page.image"></iframe> -->
+
+                  <ngx-doc-viewer [url]="page.image" viewer="google" class="square-50"></ngx-doc-viewer>
+                </div>
+                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div style="padding:10px">
+                    <strong>{{page.userData.firstName}} {{page.userData.lastName}}</strong>
+                  </div>
+                </div>
+                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div fxLayout="row wrap" style=" margin-top: -47px;" fxLayoutAlign="start stretch" [fxShow]="true">
+                    <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+                      <div style="padding:10px; width:270px;" class="hover bg-grey">
+                        Email Address <br><strong>{{page.userData.email}}</strong></div>
+                      <div style="padding:10px; width:270px;" class="hover bg-grey">
+                        Cell Number<br><strong>{{page.userData.contacts}}</strong></div>
+                      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button style="color:white" class="bg-primary" (click)="update(accountDetailsForm)">Update</button></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row wrap" class="quad" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" style=" margin:85px; margin-left:30px" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div style="padding:10px; width:270px;" class="hover bg-grey">
+                    Id Number<br><strong>{{page.userData.idNum}}</strong></div><span style="padding:10px; width:270px;gap:1em;display:flex;" class="hover bg-grey">
+                <button mat-raised-button (click)="getDocId()">View Id</button><button mat-raised-button (click)="getDocAddress()">View proof of address</button></span>
+                  <div style="padding:10px; width:270px;" class="bg-grey hover">
+                    Status<br>
+                    <div fxLayout="column wrap" class="bg-grey input-container-selected" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;always&apos;">
+                        <mat-label></mat-label>
+                        <mat-select [disableRipple]="false" placeholder="{{page.userData.status}}" [(ngModel)]="page.userData.status" [required]="false" [ngModelOptions]="{standalone: true}" [disabled]="(page.userData.status == &apos;approved&apos; &amp;&amp; page.isUpdated || page.userData?.isUpdated) || (page.userData.status == &apos;rejected&apos; &amp;&amp; page.isUpdated|| page.userData?.isUpdated)">
+                          <mat-option [value]="&apos;approved&apos;" disabled="false">approved</mat-option><mat-option [value]="&apos;rejected&apos;" disabled="false">rejected</mat-option>
+                        </mat-select>
+
+                      </mat-form-field></div>
+                  </div>
+                </div>
+              </div>
+              <div fxLayout="row wrap" style=" margin:85px; margin-left: -65px;" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" style="width: 10px;" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div style="padding:10px; width:270px;" class="hover bg-grey">
+                    Documents Provide:<br><strong>Yes</strong></div>
+                  <div style="padding:10px; width:270px;" class="hover bg-grey">
+                    Employment Type<br><strong>N/A</strong></div>
+                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="(page.userData.status === &apos;rejected&apos; )"><mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <mat-label>Enter rejection reason</mat-label>
+                      <textarea matInput [(ngModel)]="page.userData.rejectionReason" name="rejectionReason" [required]="false"></textarea>
+                    </mat-form-field></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

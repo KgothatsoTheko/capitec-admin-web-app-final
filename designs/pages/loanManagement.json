@@ -1,0 +1,598 @@
+[
+    {
+        "id": "sd_CNak2b7p6lmI5szB",
+        "type": "tab",
+        "createdDate": "2024-05-16T10:21:20.231Z",
+        "label": "loanManagement",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 1,
+        "generateNext": true,
+        "serviceName": "loanManagementComponent"
+    },
+    {
+        "id": "sd_98OB3yKjYCgQarsH",
+        "type": "OnInit",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_98OB3yKjYCgQarsH",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_RDfAqbVudXw5QIZB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loanManagementComponent"
+    },
+    {
+        "id": "sd_hiqKaTtMWsdupDDk",
+        "type": "PageVariables",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "pictureUrl",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "http://localhost:8081/api/download-picture/"
+                }
+            }
+        ],
+        "functionName": "sd_hiqKaTtMWsdupDDk",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_PcRtxjnphRGiS4RN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_PcRtxjnphRGiS4RN",
+        "type": "Environment",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh",
+                    "value": "url"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_PcRtxjnphRGiS4RN",
+        "category": "General",
+        "x": 165,
+        "y": 240,
+        "wires": [
+            [
+                "sd_l6BcaEy5SYxBnEvo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_l6BcaEy5SYxBnEvo",
+        "type": "Script",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = bh.url  + 'get-loans';",
+        "functionName": "sd_l6BcaEy5SYxBnEvo",
+        "category": "Function",
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "sd_UytWztde1wEm86Jb"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UytWztde1wEm86Jb",
+        "type": "HttpRequest",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "this.page.loanResult",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "loanResult"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_UytWztde1wEm86Jb",
+        "category": "HTTP",
+        "x": 405,
+        "y": 240,
+        "wires": [
+            [
+                "sd_293CVRDbGTUuzejv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_293CVRDbGTUuzejv",
+        "type": "Script",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// page.loanResult.interestRate = 13.5\npage.loanResult = page.loanResult.filter((res) => {\n    if(res.fullName) {\n        res.firstName = res.fullName.split(' ')[0]\n        res.lastName = res.fullName.split(' ')[res.fullName.split(' ').length -1]\n        return res\n    }\n    else {\n        return res\n    }\n})\nbh.local.dataSource = new MatTableDataSource(page.loanResult);",
+        "functionName": "sd_293CVRDbGTUuzejv",
+        "category": "Function",
+        "x": 365,
+        "y": 40,
+        "wires": [
+            [
+                "sd_OYUtQnmOwCjLj1ir"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_OYUtQnmOwCjLj1ir",
+        "type": "PageVariables",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "tableData",
+                "typedIpValue": {
+                    "type": "bh.local",
+                    "value": "dataSource"
+                }
+            }
+        ],
+        "functionName": "sd_OYUtQnmOwCjLj1ir",
+        "category": "Function",
+        "x": 505,
+        "y": 40,
+        "wires": [
+            [
+                "sd_5T0s6I7xXD9OhB1G"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ONSQD6hfY6OrYfxB",
+        "type": "PageStart",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "selectedRow",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "row",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "selectedRow",
+        "category": "General",
+        "x": 65,
+        "y": 400,
+        "wires": [
+            [
+                "sd_cp51nYJledlKqY8f"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loanManagementComponent"
+    },
+    {
+        "id": "sd_7Wn8jGUwjkgLP2Hj",
+        "type": "Storage",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "userLoan"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "user"
+        },
+        "resultMapping": {},
+        "functionName": "sd_7Wn8jGUwjkgLP2Hj",
+        "category": "Storage",
+        "x": 205,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_cp51nYJledlKqY8f",
+        "type": "Script",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.user = bh.input.row\n\nconsole.log(\"loan user\",page.user)\npage.router.navigate(['/home/Selected Loan'])",
+        "functionName": "sd_cp51nYJledlKqY8f",
+        "category": "Function",
+        "x": 125,
+        "y": 400,
+        "wires": [
+            [
+                "sd_7Wn8jGUwjkgLP2Hj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_RDfAqbVudXw5QIZB",
+        "type": "UseDependency",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Router",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "router"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/router",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_RDfAqbVudXw5QIZB",
+        "category": "Function",
+        "x": 105,
+        "y": 40,
+        "wires": [
+            [
+                "sd_hiqKaTtMWsdupDDk"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_SWtmuvSnszPBqn2w",
+        "type": "AfterViewInit",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "ngAfterViewInit",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 510,
+        "wires": [
+            [
+                "sd_hGGHPBl3keWg9h5b"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loanManagementComponent"
+    },
+    {
+        "id": "sd_hGGHPBl3keWg9h5b",
+        "type": "ViewPicker",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "childViewVariables": [
+            {
+                "key": {
+                    "type": "literal",
+                    "value": "MatPaginator"
+                },
+                "defaultValue": "",
+                "isViewChildren": false
+            }
+        ],
+        "functionName": "sd_xKCCTWKzvgDN0rx7_1",
+        "category": "Function",
+        "x": 205,
+        "y": 510,
+        "wires": [
+            [
+                "sd_mIfbYxPuiTq1KzlX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mIfbYxPuiTq1KzlX",
+        "type": "Script",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "this.page.tableData.paginator = this.MatPaginator;",
+        "functionName": "sd_2VNGqvcKee34lvOz_1",
+        "category": "Function",
+        "x": 345,
+        "y": 510,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FsVugZqlYo9xbau4",
+        "type": "Environment",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_FsVugZqlYo9xbau4",
+        "category": "General",
+        "x": 165,
+        "y": 680,
+        "wires": [
+            [
+                "sd_hoEjtrytezjSkMsp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hoEjtrytezjSkMsp",
+        "type": "Script",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\n\nbh.url = page.ssdUrl +  `download-picture/${page.result[0].email}`;\n// page.profileImage = page.ssdUrl + `download-picture/${page.result.email}`\n\nconsole.log(\"page.result\", page.result)",
+        "functionName": "sd_hoEjtrytezjSkMsp",
+        "category": "Function",
+        "x": 325,
+        "y": 680,
+        "wires": [
+            [
+                "sd_JNLRaRncA1zz8vYQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_JNLRaRncA1zz8vYQ",
+        "type": "HttpRequest",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.result.email",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result.email"
+        },
+        "resultMapping": "this.page.resultPicture",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "resultPicture"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_JNLRaRncA1zz8vYQ",
+        "category": "HTTP",
+        "x": 445,
+        "y": 680,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_OJFPkAnhr3RPztSP",
+        "type": "PageStart",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "get picute",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getPicute",
+        "category": "General",
+        "x": 65,
+        "y": 680,
+        "wires": [
+            [
+                "sd_FsVugZqlYo9xbau4"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loanManagementComponent"
+    },
+    {
+        "id": "sd_5T0s6I7xXD9OhB1G",
+        "type": "PageCallService",
+        "z": "sd_CNak2b7p6lmI5szB",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_CNak2b7p6lmI5szB",
+            "type": "tab",
+            "createdDate": "2024-05-16T10:21:20.231Z",
+            "label": "loanManagement",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 1
+        },
+        "flow": {
+            "flowId": "sd_OJFPkAnhr3RPztSP",
+            "flowName": "getPicute"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "getPicute",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_5T0s6I7xXD9OhB1G",
+        "category": "General",
+        "x": 600,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loanManagementComponent",
+        "generated": true
+    }
+]

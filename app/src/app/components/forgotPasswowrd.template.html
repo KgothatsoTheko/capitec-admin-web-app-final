@@ -1,0 +1,29 @@
+<div fxLayout="column wrap" style="padding-top:100px" class="full-width full-height" fxLayoutGap="5em" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="column wrap" class="forgot-password form-half" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" (click)=" callGoBack()">
+      <div fxLayout="row wrap" style="padding-top:30px" fxLayoutAlign="center center" [fxShow]="true" routerLink="/home/landing"><img imgSrc="/capetic/icons/capitec-logo.svg"></div><mat-icon><span class="material-symbols-outlined"> chevron_left </span></mat-icon>
+    </div>
+    <div fxLayout="column wrap" style="padding:10px" fxLayoutAlign="start stretch" [fxShow]="true">
+      <form #forgotPasswordForm="ngForm">
+        <div fxLayout="row wrap" class="margin-b-2em" fxLayoutAlign="center stretch" [fxShow]="true">
+          <div class="text-center">
+            <h2 class="no-margin font-weight-500">Forgot Password</h2>
+            <small class="grey">Enter your email below to get a verification code.</small>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" class="input-container" fxLayoutAlign="start stretch" [fxShow]="true"><label style="padding-bottom:10px;">
+              Email</label>
+            <mat-form-field style="   padding-left: 0px;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput [(ngModel)]="page.userDetails.email" name="email" placeholder="Please enter your email" [required]="true" #email="ngModel" [pattern]="page.emailPattern">
+
+            </mat-form-field><label class="red">
+              <small *ngIf="(page.submitted || email.touched) &amp;&amp; (email.errors &amp;&amp; email.errors?.required)">Email is <b>required</b></small>
+              <small *ngIf="(page.submitted || email.touched) &amp;&amp; (email.errors &amp;&amp; email.errors?.pattern)">Please enter <b>valid</b> email</small></label>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="full-width b-radius-20px primary-btn" (click)="forgotPassword(forgotPasswordForm)">Submit</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

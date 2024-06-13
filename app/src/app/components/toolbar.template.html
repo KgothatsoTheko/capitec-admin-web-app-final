@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/home/landing"><img imgSrc="/capetic/icons/capitec-logo.svg"></div>
+  <div fxLayout="row wrap" class="spacer" fxLayoutAlign="start stretch" [fxShow]="true"><span>
+                </span></div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button [matMenuTriggerFor]="menu">Menu</button><mat-menu #menu="matMenu" hasBackdrop="true"><button mat-menu-item (click)="accountManagement()"> Account Management </button><button mat-menu-item (click)="loanManagement()"> Loan management </button><button mat-menu-item (click)="reports()"> Reports </button><button mat-menu-item (click)="support()"> Support </button><button mat-menu-item (click)="settings()"> Settings </button></mat-menu><mat-icon style="  padding-top: 5px; "> keyboard_arrow_down</mat-icon></div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" routerLink="/sign-in"><img imgSrc="/capetic/icons/internet-banking-desktop.svg" style="  padding-left: 50px;" matTooltip="Log Out" class="pointer">
+    <div style="  position: relative;   top: -11px;   right: 5px;">
+      <p style=" color : red;font-size: small;">{{page.numChanges}}</p>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div>
+      <small>Admin</small><br>
+    </div>
+  </div>
+</mat-toolbar>

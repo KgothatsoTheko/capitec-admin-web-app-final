@@ -1,0 +1,13 @@
+{
+    "displayName": "admin-web-capitec",
+    "appName": "admin-web-capitec",
+    "description": "An admin web application for capitec administrators",
+    "lastModified": "2024-05-13T13:32:13.815Z",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "appType": "uiOnly",
+    "templateName": "blank",
+    "createDate": "2024-05-13T13:32:12.883Z",
+    "analyticsId": "311d45bb-88f4-8a20-b287-b189c87842fb",
+    "createdStudioVersion": "9.2.1"
+}

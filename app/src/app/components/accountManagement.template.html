@@ -1,0 +1,66 @@
+<div fxLayout="column wrap" style=" " class="bg-grey" fxLayoutAlign="start stretch" [fxShow]="true">
+  <header>
+    <h1 style="text-align:center;" class="light-blue">
+      Account Management</h1>
+  </header>
+  <div fxLayout="column wrap" class="bg-grey" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column" class="bg-grey table">
+      <table mat-table [dataSource]="page.tableData" matSort class="table-width-fix">
+        <tr mat-header-row *matHeaderRowDef="[&apos;6aee06f9-d424-7565-3f70-9655cdf980f8&apos;,&apos;firstName  | titlecase&apos;,&apos;lastName  | titlecase&apos;,&apos;idNum&apos;,&apos;contacts&apos;,&apos;email  | titlecase&apos;,&apos;bd5a3101-c485-1c29-31c5-4cac6fcb0722&apos;,&apos;status | titlecase&apos;]"></tr>
+        <tr mat-row (click)="selectedRow(row)" *matRowDef="let row; columns: [&apos;6aee06f9-d424-7565-3f70-9655cdf980f8&apos;,&apos;firstName  | titlecase&apos;,&apos;lastName  | titlecase&apos;,&apos;idNum&apos;,&apos;contacts&apos;,&apos;email  | titlecase&apos;,&apos;bd5a3101-c485-1c29-31c5-4cac6fcb0722&apos;,&apos;status | titlecase&apos;];"></tr>
+
+        <ng-container matColumnDef="6aee06f9-d424-7565-3f70-9655cdf980f8">
+          <th mat-header-cell *matHeaderCellDef class="bg-grey"></th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey"><img [src]="page.pictureUrl + table.email" crossOrigin="anonymous" class="round square-50"></td>
+        </ng-container>
+
+        <ng-container matColumnDef="firstName  | titlecase">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-grey">Name </th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey on-hover">{{table.firstName | titlecase }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="lastName  | titlecase">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-grey">Surname</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey">{{table.lastName | titlecase}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="idNum">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-grey">Id number</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey">{{table.idNum}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="contacts">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="bg-grey">Cell number</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey">{{table.contacts}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email  | titlecase">
+          <th mat-header-cell *matHeaderCellDef class="bg-grey">Email address</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey">{{table.email | titlecase}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="bd5a3101-c485-1c29-31c5-4cac6fcb0722">
+          <th mat-header-cell *matHeaderCellDef class="bg-grey"></th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey">
+            <div>
+              <div>
+                <!-- <p>Status: {{ table.status | titlecase }}</p> -->
+                <span *ngIf="(table.status | titlecase) === &apos;Rejected&apos;" class="dot red-dot"></span>
+                <span *ngIf="(table.status | titlecase) === &apos;Approved&apos;" class="dot green-dot"></span>
+                <span *ngIf="(table.status | titlecase) === &apos;Pending&apos;" class="dot blue-dot"></span>
+              </div>
+            </div>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status | titlecase">
+          <th mat-header-cell *matHeaderCellDef class="bg-grey">Status</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="bg-grey">{{ table.status | titlecase }}</td>
+        </ng-container>
+      </table>
+      <mat-paginator [length]="page.tableData.length" class="bg-grey" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">
+      </mat-paginator>
+
+    </div>
+  </div>
+</div>

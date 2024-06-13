@@ -1,0 +1,326 @@
+[
+    {
+        "id": "sd_a0xrdEeKPIYaTwl1",
+        "type": "tab",
+        "createdDate": "2024-05-27T10:02:38.771Z",
+        "label": "shared",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "shared",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_NRzQzuFnzCxCjA8J",
+        "type": "Start",
+        "z": "sd_a0xrdEeKPIYaTwl1",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "go back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "goBack",
+        "category": "General",
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "sd_fF9FKnig0FZmWAK6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "shared"
+    },
+    {
+        "id": "sd_fF9FKnig0FZmWAK6",
+        "type": "UseDependency",
+        "z": "sd_a0xrdEeKPIYaTwl1",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Location",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "location"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/common",
+        "serviceDesignerType": "client",
+        "functionName": "sd_fF9FKnig0FZmWAK6",
+        "category": "Function",
+        "x": 325,
+        "y": 240,
+        "wires": [
+            [
+                "sd_SwdPtET0uE7kTbKA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "shared",
+        "generated": true
+    },
+    {
+        "id": "sd_SwdPtET0uE7kTbKA",
+        "type": "Script",
+        "z": "sd_a0xrdEeKPIYaTwl1",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\nbh.location.back();",
+        "functionName": "sd_SwdPtET0uE7kTbKA",
+        "category": "Function",
+        "x": 465,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "shared",
+        "generated": true
+    },
+    {
+        "id": "sd_jBUAmyuWdw4rFkBG",
+        "type": "Start",
+        "z": "sd_a0xrdEeKPIYaTwl1",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "getID",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "email",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "url",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "getId",
+        "category": "General",
+        "x": 165,
+        "y": 100,
+        "wires": [
+            [
+                "sd_lWIaIwhSOI46vTH8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "shared"
+    },
+    {
+        "id": "sd_lWIaIwhSOI46vTH8",
+        "type": "Environment",
+        "z": "sd_a0xrdEeKPIYaTwl1",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [],
+        "functionName": "sd_lWIaIwhSOI46vTH8",
+        "category": "General",
+        "x": 265,
+        "y": 100,
+        "wires": [
+            [
+                "sd_EwnDtqMslm1cVMCG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "shared",
+        "generated": true
+    },
+    {
+        "id": "sd_EwnDtqMslm1cVMCG",
+        "type": "Script",
+        "z": "sd_a0xrdEeKPIYaTwl1",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// let email = page.userData.email;\n// let url = page.ssdUrl + `download_ID/${email}`;\n// bh.local.url = url\n\n\n// console.log(bh.local.url)",
+        "functionName": "sd_EwnDtqMslm1cVMCG",
+        "category": "Function",
+        "x": 360,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "shared",
+        "generated": true
+    },
+    {
+        "id": "sd_GX9X1JNAIIN6IZcd",
+        "type": "Start",
+        "z": "sd_a0xrdEeKPIYaTwl1",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "getPic",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "email",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "image",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "getPic",
+        "category": "General",
+        "x": 185,
+        "y": 360,
+        "wires": [
+            [
+                "sd_YcLasrcc8CbCjFFC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "shared"
+    },
+    {
+        "id": "sd_YcLasrcc8CbCjFFC",
+        "type": "Environment",
+        "z": "sd_a0xrdEeKPIYaTwl1",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_YcLasrcc8CbCjFFC",
+        "category": "General",
+        "x": 285,
+        "y": 360,
+        "wires": [
+            [
+                "sd_g7rzvoz3buLe8UGH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "shared",
+        "generated": true
+    },
+    {
+        "id": "sd_g7rzvoz3buLe8UGH",
+        "type": "Script",
+        "z": "sd_a0xrdEeKPIYaTwl1",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = bh.ssdUrl + `download-picture/${bh.input.email}`;\n// bh.local.url = url\n\n\nconsole.log(bh.url)",
+        "functionName": "sd_g7rzvoz3buLe8UGH",
+        "category": "Function",
+        "x": 405,
+        "y": 360,
+        "wires": [
+            [
+                "sd_8y7cPWaJtVQ6ecJS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "shared",
+        "generated": true
+    },
+    {
+        "id": "sd_8y7cPWaJtVQ6ecJS",
+        "type": "HttpRequest",
+        "z": "sd_a0xrdEeKPIYaTwl1",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.image",
+        "resultMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "local.image"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_8y7cPWaJtVQ6ecJS",
+        "category": "HTTP",
+        "x": 520,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "shared",
+        "generated": true
+    }
+]

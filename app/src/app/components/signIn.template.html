@@ -1,0 +1,41 @@
+<div fxLayout="column wrap" style="height: 100%" class="full-height" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" style="height: 100%" class="full-height" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="image-half" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="capetic/images/hello.jpg" class="image-half"></div>
+      <form #signInForm="ngForm" class="form-half">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" fxFill>
+          <form #signInForm="ngForm">
+            <div fxLayout="row wrap" class="margin-b-2em" fxLayoutAlign="center stretch" [fxShow]="true">
+              <div class="text-center">
+                <h2 class="no-margin font-weight-500">Sign In</h2>
+                <small class="grey">Hi, Welcome back, you&apos;ve been missed.</small>
+              </div>
+            </div>
+            <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column " class="input-container" fxLayoutAlign="start start" [fxShow]="true"><label style="    padding-left: 30px; padding-bottom: 10px;">
+                  Email</label>
+                <mat-form-field style="margin:0;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [(ngModel)]="page.userDetails.email" name="email" placeholder="Enter your email" [required]="true" #email="ngModel" [pattern]="page.emailPattern">
+
+                </mat-form-field><label *ngIf="(page.submitted || email.touched) &amp;&amp; (email.errors &amp;&amp; email.errors?.required)" style="padding-left: 30px;" class="red">
+                  <small *ngIf="(page.submitted || email.touched) &amp;&amp; (email.errors &amp;&amp; email.errors?.required)">Email is <b>required</b></small>
+                  <small *ngIf="(page.submitted || email.touched) &amp;&amp; (email.errors &amp;&amp; email.errors?.pattern)">Please enter <b>valid</b> email</small></label>
+              </div>
+              <div fxLayout="column " class="input-container" fxLayoutAlign="start stretch" [fxShow]="true"><label style="padding-left: 30px; padding-bottom: 10px;">
+                  Password</label>
+                <mat-form-field style=" margin: 0 !important;" class="red" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [(ngModel)]="page.userDetails.password" name="password" type="{{page.hideIcon ? &apos;password&apos; : &apos;text&apos;}}" placeholder="Enter your password" [required]="true" #password="ngModel">
+                  <mat-icon matSuffix (click)="page.hideIcon = !page.hideIcon">{{page.hideIcon ? &apos;visibility_off&apos; : &apos;visibility&apos;}}</mat-icon>
+                </mat-form-field><label *ngIf="(page.submitted || password.touched) &amp;&amp; (password.errors &amp;&amp; password.errors?.required)" style="padding-left: 30px;" class="red">
+                  <small>Password is <b>required</b></small></label>
+              </div>
+              <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true"><label class="primary underline pointer">
+                  <small routerLink="/Forgot  Password">Forgot password</small></label></div>
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button style="margin-bottom :20px" class="full-width b-radius-20px primary-btn" (click)="signIn(signInForm)">Sign In</button></div>
+            </div>
+          </form>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

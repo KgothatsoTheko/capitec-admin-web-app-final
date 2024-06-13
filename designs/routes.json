@@ -1,0 +1,88 @@
+{
+    "routes": [
+        {
+            "path": "sign-in",
+            "component": "signInComponent",
+            "canActivate": {
+                "edited": true,
+                "value": ""
+            }
+        },
+        {
+            "path": "home",
+            "component": "homeComponent",
+            "children": [
+                {
+                    "path": "landing",
+                    "component": "landingComponent",
+                    "canActivate": {
+                        "edited": true,
+                        "value": ""
+                    }
+                },
+                {
+                    "path": "Account Management",
+                    "component": "accountManagementComponent"
+                },
+                {
+                    "path": "Loan management",
+                    "component": "loanManagementComponent"
+                },
+                {
+                    "path": "Reports",
+                    "component": "ReportsComponent"
+                },
+                {
+                    "path": "Settings",
+                    "component": "SettingsComponent"
+                },
+                {
+                    "path": "Support",
+                    "component": "SupportComponent"
+                },
+                {
+                    "path": "Selected Account",
+                    "component": "selectedAccountComponent"
+                },
+                {
+                    "path": "Selected Loan",
+                    "component": "selectedLoanComponent"
+                }
+            ],
+            "canActivate": {
+                "edited": true,
+                "value": ""
+            }
+        },
+        {
+            "path": "Forgot  Password",
+            "component": "forgotPasswowrdComponent"
+        },
+        {
+            "path": "verification",
+            "component": "verificationComponent"
+        },
+        {
+            "component": "newPasswordComponent",
+            "path": "new Password"
+        },
+        {
+            "path": "file",
+            "component": "open_fileComponent"
+        },
+        {
+            "path": "open_proof",
+            "component": "open_file1Component"
+        },
+        {
+            "path": "''",
+            "redirectTo": "/sign-in",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

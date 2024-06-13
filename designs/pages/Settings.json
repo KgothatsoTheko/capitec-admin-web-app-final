@@ -1,0 +1,64 @@
+[
+    {
+        "id": "sd_p4ZcUytGxZ0aiuJj",
+        "type": "tab",
+        "createdDate": "2024-05-16T10:21:41.262Z",
+        "label": "Settings",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "SettingsComponent"
+    },
+    {
+        "id": "sd_p5er7JCBANjDVt0J",
+        "type": "OnInit",
+        "z": "sd_p4ZcUytGxZ0aiuJj",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_p5er7JCBANjDVt0J",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_Rx0KNdTejDhCkv2v"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "SettingsComponent"
+    },
+    {
+        "id": "sd_Rx0KNdTejDhCkv2v",
+        "type": "PageVariables",
+        "z": "sd_p4ZcUytGxZ0aiuJj",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "settings",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "{ timezone: 'GMT', language: 'en', emailNotifications: true  }"
+                }
+            }
+        ],
+        "functionName": "sd_Rx0KNdTejDhCkv2v",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "SettingsComponent",
+        "generated": true
+    }
+]

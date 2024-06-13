@@ -1,0 +1,809 @@
+[
+    {
+        "id": "sd_0N9EsyeCXWPPsgBD",
+        "type": "tab",
+        "createdDate": "2024-05-15T19:31:01.995Z",
+        "label": "toolbar",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_yHcANpDxhwcWTqno",
+        "type": "OnInit",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_yHcANpDxhwcWTqno",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_7rMHc8E2NydyX5JC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_7rMHc8E2NydyX5JC",
+        "type": "PageVariables",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "buttons",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[{\"value\":\"Bold\"}, {\"value\":\"italic\"}, {\"value\":\"strike\"}] "
+                }
+            }
+        ],
+        "functionName": "sd_7rMHc8E2NydyX5JC",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_ZNjZXvXLdFvJIFbD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_4kwcIzGBV0p7pp8F",
+        "type": "Navigation",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Account Management",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_4kwcIzGBV0p7pp8F",
+        "category": "Navigation",
+        "x": 245,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_cAh25CEmi4c4Mbhn",
+        "type": "PageStart",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Account Management",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "accountManagement",
+        "category": "General",
+        "x": 105,
+        "y": 140,
+        "wires": [
+            [
+                "sd_4kwcIzGBV0p7pp8F"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_NvwjAEs5AabXZf7L",
+        "type": "PageStart",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Loan management",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "loanManagement",
+        "category": "General",
+        "x": 105,
+        "y": 240,
+        "wires": [
+            [
+                "sd_K4FYNWiJobN14VrC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_K4FYNWiJobN14VrC",
+        "type": "Navigation",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Loan management",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_K4FYNWiJobN14VrC",
+        "category": "Navigation",
+        "x": 245,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_wbthoiSi2Q6cVxBw",
+        "type": "Navigation",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Reports",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_wbthoiSi2Q6cVxBw",
+        "category": "Navigation",
+        "x": 245,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_lfphhjGmRwyla3dZ",
+        "type": "PageStart",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Reports",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "reports",
+        "category": "General",
+        "x": 105,
+        "y": 340,
+        "wires": [
+            [
+                "sd_wbthoiSi2Q6cVxBw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_3iW36Q8qFn7OZCUJ",
+        "type": "PageStart",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Settings",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "settings",
+        "category": "General",
+        "x": 105,
+        "y": 440,
+        "wires": [
+            [
+                "sd_n8urGpIRbDRCAfrY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_n8urGpIRbDRCAfrY",
+        "type": "Navigation",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Settings",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_n8urGpIRbDRCAfrY",
+        "category": "Navigation",
+        "x": 245,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_qDMdLYc2otJGBLJD",
+        "type": "PageStart",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Support",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "support",
+        "category": "General",
+        "x": 105,
+        "y": 540,
+        "wires": [
+            [
+                "sd_n1buGrglMWElhtbP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_n1buGrglMWElhtbP",
+        "type": "Navigation",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Support",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_n1buGrglMWElhtbP",
+        "category": "Navigation",
+        "x": 245,
+        "y": 540,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_ZNjZXvXLdFvJIFbD",
+        "type": "Storage",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "numChanges"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "numChanges"
+        },
+        "functionName": "sd_ZNjZXvXLdFvJIFbD",
+        "category": "Storage",
+        "x": 400,
+        "y": 60,
+        "wires": [
+            [
+                "sd_M4z11HOXX1Ug8f7a"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_M4z11HOXX1Ug8f7a",
+        "type": "Script",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"num received\", page.numChanges)",
+        "functionName": "sd_M4z11HOXX1Ug8f7a",
+        "category": "Function",
+        "x": 540,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_Gey2VyvecMwSGGrc",
+        "type": "Storage",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "numChanges"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "numChanges"
+        },
+        "functionName": "sd_Gey2VyvecMwSGGrc",
+        "category": "Storage",
+        "x": 425,
+        "y": 320,
+        "wires": [
+            [
+                "sd_t9CKr4WqUoq4yecU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_t9CKr4WqUoq4yecU",
+        "type": "Script",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"num received\", page.numChanges)",
+        "functionName": "sd_t9CKr4WqUoq4yecU",
+        "category": "Function",
+        "x": 565,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_7rMHc8E2NydyX5JC",
+        "type": "PageVariables",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "buttons",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[{\"value\":\"Bold\"}, {\"value\":\"italic\"}, {\"value\":\"strike\"}] "
+                }
+            }
+        ],
+        "functionName": "sd_7rMHc8E2NydyX5JC",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_ZNjZXvXLdFvJIFbD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4kwcIzGBV0p7pp8F",
+        "type": "Navigation",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Account Management",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_4kwcIzGBV0p7pp8F",
+        "category": "Navigation",
+        "x": 245,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_cAh25CEmi4c4Mbhn",
+        "type": "PageStart",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Account Management",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "accountManagement",
+        "category": "General",
+        "x": 105,
+        "y": 140,
+        "wires": [
+            [
+                "sd_4kwcIzGBV0p7pp8F"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_NvwjAEs5AabXZf7L",
+        "type": "PageStart",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Loan management",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "loanManagement",
+        "category": "General",
+        "x": 105,
+        "y": 240,
+        "wires": [
+            [
+                "sd_K4FYNWiJobN14VrC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_K4FYNWiJobN14VrC",
+        "type": "Navigation",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Loan management",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_K4FYNWiJobN14VrC",
+        "category": "Navigation",
+        "x": 245,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wbthoiSi2Q6cVxBw",
+        "type": "Navigation",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Reports",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_wbthoiSi2Q6cVxBw",
+        "category": "Navigation",
+        "x": 245,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lfphhjGmRwyla3dZ",
+        "type": "PageStart",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Reports",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "reports",
+        "category": "General",
+        "x": 105,
+        "y": 340,
+        "wires": [
+            [
+                "sd_wbthoiSi2Q6cVxBw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_3iW36Q8qFn7OZCUJ",
+        "type": "PageStart",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Settings",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "settings",
+        "category": "General",
+        "x": 105,
+        "y": 440,
+        "wires": [
+            [
+                "sd_n8urGpIRbDRCAfrY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_n8urGpIRbDRCAfrY",
+        "type": "Navigation",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Settings",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_n8urGpIRbDRCAfrY",
+        "category": "Navigation",
+        "x": 245,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qDMdLYc2otJGBLJD",
+        "type": "PageStart",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Support",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "support",
+        "category": "General",
+        "x": 105,
+        "y": 540,
+        "wires": [
+            [
+                "sd_n1buGrglMWElhtbP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_n1buGrglMWElhtbP",
+        "type": "Navigation",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Support",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_n1buGrglMWElhtbP",
+        "category": "Navigation",
+        "x": 245,
+        "y": 540,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ZNjZXvXLdFvJIFbD",
+        "type": "Storage",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "numChanges"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "numChanges"
+        },
+        "functionName": "sd_ZNjZXvXLdFvJIFbD",
+        "category": "Storage",
+        "x": 400,
+        "y": 60,
+        "wires": [
+            [
+                "sd_M4z11HOXX1Ug8f7a"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_M4z11HOXX1Ug8f7a",
+        "type": "Script",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"num received\", page.numChanges)",
+        "functionName": "sd_M4z11HOXX1Ug8f7a",
+        "category": "Function",
+        "x": 540,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Gey2VyvecMwSGGrc",
+        "type": "Storage",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "numChanges"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "numChanges"
+        },
+        "functionName": "sd_Gey2VyvecMwSGGrc",
+        "category": "Storage",
+        "x": 425,
+        "y": 320,
+        "wires": [
+            [
+                "sd_t9CKr4WqUoq4yecU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_t9CKr4WqUoq4yecU",
+        "type": "Script",
+        "z": "sd_0N9EsyeCXWPPsgBD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"num received\", page.numChanges)",
+        "functionName": "sd_t9CKr4WqUoq4yecU",
+        "category": "Function",
+        "x": 565,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    }
+]

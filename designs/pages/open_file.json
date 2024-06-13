@@ -1,0 +1,150 @@
+[
+    {
+        "id": "sd_FzWYpHPwEqFG7LVP",
+        "type": "tab",
+        "createdDate": "2024-06-06T20:18:29.563Z",
+        "label": "open_file",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "open_fileComponent"
+    },
+    {
+        "id": "sd_bvajIKkzdgOCd4ZS",
+        "type": "OnInit",
+        "z": "sd_FzWYpHPwEqFG7LVP",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_bvajIKkzdgOCd4ZS",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 40,
+        "wires": [
+            [
+                "sd_loDk8Ew4dbMgSNNV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "open_fileComponent"
+    },
+    {
+        "id": "sd_loDk8Ew4dbMgSNNV",
+        "type": "PageVariables",
+        "z": "sd_FzWYpHPwEqFG7LVP",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "userData",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_loDk8Ew4dbMgSNNV",
+        "category": "Function",
+        "x": 145,
+        "y": 40,
+        "wires": [
+            [
+                "sd_dg9zWiB8FTsboJLo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "open_fileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_cRFjHf1S04mTRyqK",
+        "type": "Script",
+        "z": "sd_FzWYpHPwEqFG7LVP",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.userData)\n\nbh.url = page.ssdUrl + `download_ID/${page.userData.email}`;\npage.image = bh.url\n\n\nconsole.log(bh.url)",
+        "functionName": "sd_cRFjHf1S04mTRyqK",
+        "category": "Function",
+        "x": 465,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "open_fileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_DUJH3XaMPRKBSYFA",
+        "type": "Storage",
+        "z": "sd_FzWYpHPwEqFG7LVP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "userData"
+        },
+        "functionName": "sd_DUJH3XaMPRKBSYFA",
+        "category": "Storage",
+        "x": 365,
+        "y": 40,
+        "wires": [
+            [
+                "sd_cRFjHf1S04mTRyqK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "open_fileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_dg9zWiB8FTsboJLo",
+        "type": "Environment",
+        "z": "sd_FzWYpHPwEqFG7LVP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_dg9zWiB8FTsboJLo",
+        "category": "General",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            [
+                "sd_DUJH3XaMPRKBSYFA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "open_fileComponent",
+        "generated": true
+    }
+]

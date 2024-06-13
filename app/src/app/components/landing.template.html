@@ -1,0 +1,95 @@
+<div fxLayout="column wrap" style="height: 100%" class="full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" style="height: 100%" class="full-height full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" style="height: 100%" class="full-height full-width" fxLayoutAlign="space-between stretch" [fxShow]="true">
+      <div fxLayout="column wrap" style="width: 50%" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div style="margin-top:10px" class="light-blue">
+            Loan Statistics</div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-card class="card">
+              <mat-card-title>Number of approved loans:</mat-card-title>
+
+              <mat-card-content align="right">
+                <div style="top:0 !important">
+                  {{page.numApprovedLoans}}
+                </div>
+              </mat-card-content>
+            </mat-card></div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-card class="card">
+              <mat-card-title>Number of pending loans:</mat-card-title>
+
+              <mat-card-content align="right">
+                <div>
+                  {{page.numPendingLoans}}
+                </div>
+              </mat-card-content>
+            </mat-card></div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-card class="card">
+              <mat-card-title>Number of rejected loans:</mat-card-title>
+
+              <mat-card-content align="right">
+                <div>
+                  {{page.numRejectedLoans }}
+                </div>
+              </mat-card-content>
+            </mat-card></div>
+        </div>
+        <div fxLayout="column wrap" style="border-right: 2px solid white;" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" class="pie-card" fxLayoutAlign="center center" [fxShow]="true">
+            <div fxFlex="100">
+              <canvas baseChart [datasets]="page.barChartData" style=" border-color: red;" class="bg-grey" [labels]="page.barChartLabels" [options]="page.barChartOptions" [legend]="false" type="bar"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div>
+          <!-- <hr class="horizontal-line"></hr> -->
+        </div>
+      </div>
+      <div fxLayout="column wrap" style="width: 50%" class="full-height" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div style="margin-top:10px" class="light-blue">
+            Acount Statistics</div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-card class="card">
+              <mat-card-title>Number of approved applications:</mat-card-title>
+
+              <mat-card-content align="right">
+                <div style="top:0 !important">
+                  {{page.numApproved}}
+                </div>
+              </mat-card-content>
+            </mat-card></div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-card class="card">
+              <mat-card-title>Number of pending applications:</mat-card-title>
+
+              <mat-card-content align="right">
+                <div>
+                  {{page.numPending}}
+                </div>
+              </mat-card-content>
+            </mat-card></div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-card class="card">
+              <mat-card-title>Number of rejected applications:</mat-card-title>
+
+              <mat-card-content align="right">
+                <div>
+                  {{page.numRejected}}
+                </div>
+              </mat-card-content>
+            </mat-card></div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" class="pie-card" fxLayoutAlign="center center" [fxShow]="true">
+            <div>
+              <canvas baseChart [datasets]=" page.pieChartData" [labels]="page.pieChartLabels " [options]="page.pieChartOptions" type="pie"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

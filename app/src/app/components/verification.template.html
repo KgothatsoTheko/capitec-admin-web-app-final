@@ -1,0 +1,26 @@
+<div fxLayout="column wrap" style="padding-top:100px" class="full-width full-height" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="column wrap" style="padding: 100px;" class="forgot-password form-half" fxLayoutAlign="center center" [fxShow]="true">
+    <form #forgotPasswordForm="ngForm">
+      <div fxLayout="row wrap" style="padding-top:30px" fxLayoutAlign="center center" [fxShow]="true" routerLink="/home/landing"><img imgSrc="/capetic/icons/capitec-logo.svg"></div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon (click)="goBack()"><span class="material-symbols-outlined"> chevron_left </span></mat-icon></div>
+      <div fxLayout="row wrap" class="margin-b-2em" fxLayoutAlign="center stretch" [fxShow]="true">
+        <div class="text-center">
+          <h2 class="no-margin font-weight-500"> Verification</h2>
+          <small class="grey">Enter your verification code below recieved via email.</small>
+        </div>
+      </div>
+      <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="input-container" fxLayoutAlign="start stretch" [fxShow]="true"><label style="padding-bottom:10px">
+            Verification Code</label>
+          <mat-form-field style="padding-left:0px" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [(ngModel)]="page.EnteredCode" name="code" placeholder="Please enter the  verification code" [required]="true" #email="ngModel" [pattern]="page.emailPattern">
+
+          </mat-form-field><label class="red">
+            <small *ngIf="(page.submitted || email.touched) &amp;&amp; (email.errors &amp;&amp; email.errors?.required)">Email is <b>required</b></small>
+            <small *ngIf="(page.submitted || email.touched) &amp;&amp; (email.errors &amp;&amp; email.errors?.pattern)">Please enter <b>valid</b> email</small></label>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="full-width b-radius-20px primary-btn" (click)="verification(forgotPasswordForm)">Submit</button></div>
+      </div>
+    </form>
+  </div>
+</div>

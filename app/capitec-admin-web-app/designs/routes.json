@@ -1,0 +1,13 @@
+{
+    "routes": [
+        {
+            "path": "''",
+            "redirectTo": "",
+            "pathMatch": "full"
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

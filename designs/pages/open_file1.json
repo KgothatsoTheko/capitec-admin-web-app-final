@@ -1,0 +1,150 @@
+[
+    {
+        "id": "sd_XtEWYo2H1ZmhLzAO",
+        "type": "tab",
+        "createdDate": "2024-06-08T11:35:34.403Z",
+        "label": "open_file1",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "open_file1Component"
+    },
+    {
+        "id": "sd_kZ7GTdO0aHPvXqa9",
+        "type": "PageVariables",
+        "z": "sd_XtEWYo2H1ZmhLzAO",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "userData",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_kZ7GTdO0aHPvXqa9",
+        "category": "Function",
+        "x": 145,
+        "y": 40,
+        "wires": [
+            [
+                "sd_2eEzzTp0Lue7aM1N"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "open_file1Component",
+        "generated": true
+    },
+    {
+        "id": "sd_LhubeHQ2pw3FPwPV",
+        "type": "Script",
+        "z": "sd_XtEWYo2H1ZmhLzAO",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.userData)\n\nbh.url = page.ssdUrl + `download-residence/${page.userData.email}`;\npage.image = bh.url\n\n\nconsole.log(bh.url)",
+        "functionName": "sd_LhubeHQ2pw3FPwPV",
+        "category": "Function",
+        "x": 465,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "open_file1Component",
+        "generated": true
+    },
+    {
+        "id": "sd_i5IMNxINF3QtaVgP",
+        "type": "Storage",
+        "z": "sd_XtEWYo2H1ZmhLzAO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "userData"
+        },
+        "functionName": "sd_i5IMNxINF3QtaVgP",
+        "category": "Storage",
+        "x": 365,
+        "y": 40,
+        "wires": [
+            [
+                "sd_LhubeHQ2pw3FPwPV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "open_file1Component",
+        "generated": true
+    },
+    {
+        "id": "sd_2eEzzTp0Lue7aM1N",
+        "type": "Environment",
+        "z": "sd_XtEWYo2H1ZmhLzAO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_2eEzzTp0Lue7aM1N",
+        "category": "General",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            [
+                "sd_i5IMNxINF3QtaVgP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "open_file1Component",
+        "generated": true
+    },
+    {
+        "id": "sd_EcDqqb4g6jk8FtTM",
+        "type": "OnInit",
+        "z": "sd_XtEWYo2H1ZmhLzAO",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_EcDqqb4g6jk8FtTM",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_kZ7GTdO0aHPvXqa9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "open_file1Component"
+    }
+]

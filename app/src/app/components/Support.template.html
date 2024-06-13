@@ -1,0 +1,10 @@
+<div fxLayout="column wrap" style="margin:50px" class="form-half" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" style="height: 310px;" class="input-container-selected" fxLayoutGap="1em" fxLayoutAlign="center stretch" [fxShow]="true"><mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;always&apos;">
+        <mat-label></mat-label>
+        <textarea matInput [(ngModel)]="page.ticket" #ticket="ngModel" name="ticket" placeholder="Type a message for IT support" [required]="false"></textarea>
+      </mat-form-field>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button style="margin-bottom :20px" class="full-width b-radius-20px primary-btn" (click)="sendTicket()">Submit</button></div>
+    </div>
+  </div>
+</div>

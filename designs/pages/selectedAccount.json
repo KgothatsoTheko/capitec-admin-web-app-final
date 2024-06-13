@@ -1,0 +1,1463 @@
+[
+    {
+        "id": "sd_CUdG72L76nFuQSLQ",
+        "type": "tab",
+        "createdDate": "2024-05-19T19:40:20.258Z",
+        "label": "selectedAccount",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_ywzz9ome4ipvMLn4",
+        "type": "OnInit",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_ywzz9ome4ipvMLn4",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 60,
+        "wires": [
+            [
+                "sd_r0NBfpD9TAbJxxpR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_PusFvhk8A8TLr0It",
+        "type": "PageVariables",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "name",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "surname",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "idNumber",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "cellNumber",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "email",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "status",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "doc",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "currentAccount",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "selected",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "update_",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "userInfos",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "userData",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "time",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "isUpdated",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "image",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "showImage",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "routeData",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "profileImage",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_PusFvhk8A8TLr0It",
+        "category": "Function",
+        "x": 385,
+        "y": 60,
+        "wires": [
+            [
+                "sd_g1aU6GcFdfmFLfL3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_r0NBfpD9TAbJxxpR",
+        "type": "UseDependency",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Router",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "router"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/router",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_r0NBfpD9TAbJxxpR",
+        "category": "Function",
+        "x": 145,
+        "y": 60,
+        "wires": [
+            [
+                "sd_Fv3qmbMaRPtyBEe3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_IkUSiGaxwOxOMbuB",
+        "type": "Script",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let userDataString = sessionStorage.getItem('user');\n\nlet userData = JSON.parse(userDataString || '[]');\n\n\npage.userData = userData;\n\npage.profileImage = page.ssdUrl + `download-picture/${page.userData.email}`\nconsole.log('Profile image: ', page.profileImage)",
+        "functionName": "sd_IkUSiGaxwOxOMbuB",
+        "category": "Function",
+        "x": 545,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_JYu28XuAYGu1EOfQ",
+        "type": "PageStart",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "update",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "form",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "update",
+        "category": "General",
+        "x": 45,
+        "y": 200,
+        "wires": [
+            [
+                "sd_hlyQvbb4MWnGm656"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_hlyQvbb4MWnGm656",
+        "type": "Environment",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_hlyQvbb4MWnGm656",
+        "category": "General",
+        "x": 145,
+        "y": 200,
+        "wires": [
+            [
+                "sd_t0WrKccwRUxUgDz2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_t0WrKccwRUxUgDz2",
+        "type": "Script",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.update_ = true;\npage.isUpdated = true;\npage.userData.date =  new Date();\npage.userData.comeFrom = \"Account\";\npage.userData.isUpdated = page.isUpdated;\nbh.url = page.ssdUrl + 'update-admin';\nbh.collection = 'users';\n\ndelete page.userData.firstName\ndelete page.userData.lastName\n",
+        "functionName": "sd_t0WrKccwRUxUgDz2",
+        "category": "Function",
+        "x": 245,
+        "y": 200,
+        "wires": [
+            [
+                "sd_F7pMRSznh0ePoEDI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_F7pMRSznh0ePoEDI",
+        "type": "PageSwitch",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "form.valid",
+        "propertyType": "bh.input",
+        "propertyGv": "bh.input.form.valid",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_F7pMRSznh0ePoEDI",
+        "category": "Function",
+        "x": 345,
+        "y": 200,
+        "wires": [
+            [
+                "sd_ZGmTZ5vfJULOXQ9G"
+            ],
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_ZGmTZ5vfJULOXQ9G",
+        "type": "HttpRequest",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.userData",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "userData"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_ZGmTZ5vfJULOXQ9G",
+        "category": "HTTP",
+        "x": 465,
+        "y": 200,
+        "wires": [
+            [
+                "sd_TCMYWfYnqGAdFa9j"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_TCMYWfYnqGAdFa9j",
+        "type": "SnackBar",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "User status update"
+        },
+        "action": {
+            "type": "str",
+            "value": "OK"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_TCMYWfYnqGAdFa9j",
+        "category": "General",
+        "x": 565,
+        "y": 200,
+        "wires": [
+            [
+                "sd_qZOHqHvyD1ikeojM"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_qZOHqHvyD1ikeojM",
+        "type": "Navigation",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Account Management",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_qZOHqHvyD1ikeojM",
+        "category": "Navigation",
+        "x": 665,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_K3u7M8kehxbDoBjf",
+        "type": "PageStart",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "get doc id",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getDocId",
+        "category": "General",
+        "x": 65,
+        "y": 320,
+        "wires": [
+            [
+                "sd_9ImWXwHwlNMRhfE8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_zVQThDpovVigGhjw",
+        "type": "PageStart",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "disable",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "disable",
+        "category": "General",
+        "x": 65,
+        "y": 520,
+        "wires": [
+            [
+                "sd_SBptohUjPXKZRm5S"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_SBptohUjPXKZRm5S",
+        "type": "Script",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "if(page.userData.status == 'pending'){\n page.disabled = true;\n}\nelse{\n    page.disabled = false\n}",
+        "functionName": "sd_SBptohUjPXKZRm5S",
+        "category": "Function",
+        "x": 225,
+        "y": 520,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_eZd6QxMBhnbMcqXf",
+        "type": "PageStart",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "get doc address",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getDocAddress",
+        "category": "General",
+        "x": 65,
+        "y": 420,
+        "wires": [
+            [
+                "sd_oqp24qj11QzyCeaU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_lPw34e7qulELufJc",
+        "type": "Script",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdUrl + `download_ID/${page.userData.email}`;\npage.image = page.sanitizer.bypassSecurityTrustHtml(bh.url)\n\n\nconsole.log(bh.url)\n\npage.showImage = true\n\nwindow.open('/file', '_blank');",
+        "functionName": "sd_lPw34e7qulELufJc",
+        "category": "Function",
+        "x": 285,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_9ImWXwHwlNMRhfE8",
+        "type": "Environment",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_9ImWXwHwlNMRhfE8",
+        "category": "General",
+        "x": 185,
+        "y": 320,
+        "wires": [
+            [
+                "sd_lPw34e7qulELufJc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_oqp24qj11QzyCeaU",
+        "type": "Environment",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_oqp24qj11QzyCeaU",
+        "category": "General",
+        "x": 185,
+        "y": 420,
+        "wires": [
+            [
+                "sd_6FwgnIhqGRYao15L"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_6FwgnIhqGRYao15L",
+        "type": "Script",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdUrl + `download-residence/${page.userData.email}`;\npage.image = page.sanitizer.bypassSecurityTrustHtml(bh.url)\n\n\nconsole.log(bh.url)\n\npage.showImage = true\n\nwindow.open('/open_proof', '_blank');",
+        "functionName": "sd_6FwgnIhqGRYao15L",
+        "category": "Function",
+        "x": 285,
+        "y": 420,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_Fv3qmbMaRPtyBEe3",
+        "type": "UseDependency",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "DomSanitizer",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "sanitizer"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/platform-browser",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_Fv3qmbMaRPtyBEe3",
+        "category": "Function",
+        "x": 265,
+        "y": 60,
+        "wires": [
+            [
+                "sd_PusFvhk8A8TLr0It"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_g1aU6GcFdfmFLfL3",
+        "type": "Environment",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_g1aU6GcFdfmFLfL3",
+        "category": "General",
+        "x": 465,
+        "y": 60,
+        "wires": [
+            [
+                "sd_IkUSiGaxwOxOMbuB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_PusFvhk8A8TLr0It",
+        "type": "PageVariables",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "name",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "surname",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "idNumber",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "cellNumber",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "email",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "status",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "doc",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "currentAccount",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "selected",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "update_",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "userInfos",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "userData",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "time",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "isUpdated",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "image",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "showImage",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "routeData",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "profileImage",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_PusFvhk8A8TLr0It",
+        "category": "Function",
+        "x": 385,
+        "y": 60,
+        "wires": [
+            [
+                "sd_g1aU6GcFdfmFLfL3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_r0NBfpD9TAbJxxpR",
+        "type": "UseDependency",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Router",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "router"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/router",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_r0NBfpD9TAbJxxpR",
+        "category": "Function",
+        "x": 145,
+        "y": 60,
+        "wires": [
+            [
+                "sd_Fv3qmbMaRPtyBEe3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IkUSiGaxwOxOMbuB",
+        "type": "Script",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let userDataString = sessionStorage.getItem('user');\n\nlet userData = JSON.parse(userDataString || '[]');\n\n\npage.userData = userData;\n\npage.profileImage = page.ssdUrl + `download-picture/${page.userData.email}`\nconsole.log('Profile image: ', page.profileImage)",
+        "functionName": "sd_IkUSiGaxwOxOMbuB",
+        "category": "Function",
+        "x": 545,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_JYu28XuAYGu1EOfQ",
+        "type": "PageStart",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "update",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "form",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "update",
+        "category": "General",
+        "x": 45,
+        "y": 200,
+        "wires": [
+            [
+                "sd_hlyQvbb4MWnGm656"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_hlyQvbb4MWnGm656",
+        "type": "Environment",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_hlyQvbb4MWnGm656",
+        "category": "General",
+        "x": 145,
+        "y": 200,
+        "wires": [
+            [
+                "sd_t0WrKccwRUxUgDz2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_t0WrKccwRUxUgDz2",
+        "type": "Script",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.update_ = true;\npage.isUpdated = true;\npage.userData.date =  new Date();\npage.userData.comeFrom = \"Account\";\npage.userData.isUpdated = page.isUpdated;\nbh.url = page.ssdUrl + 'update-admin';\nbh.collection = 'users';\n\ndelete page.userData.firstName\ndelete page.userData.lastName\n",
+        "functionName": "sd_t0WrKccwRUxUgDz2",
+        "category": "Function",
+        "x": 245,
+        "y": 200,
+        "wires": [
+            [
+                "sd_F7pMRSznh0ePoEDI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_F7pMRSznh0ePoEDI",
+        "type": "PageSwitch",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "form.valid",
+        "propertyType": "bh.input",
+        "propertyGv": "bh.input.form.valid",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_F7pMRSznh0ePoEDI",
+        "category": "Function",
+        "x": 345,
+        "y": 200,
+        "wires": [
+            [
+                "sd_ZGmTZ5vfJULOXQ9G"
+            ],
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ZGmTZ5vfJULOXQ9G",
+        "type": "HttpRequest",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.userData",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "userData"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_ZGmTZ5vfJULOXQ9G",
+        "category": "HTTP",
+        "x": 465,
+        "y": 200,
+        "wires": [
+            [
+                "sd_TCMYWfYnqGAdFa9j"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_TCMYWfYnqGAdFa9j",
+        "type": "SnackBar",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "User status update"
+        },
+        "action": {
+            "type": "str",
+            "value": "OK"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_TCMYWfYnqGAdFa9j",
+        "category": "General",
+        "x": 565,
+        "y": 200,
+        "wires": [
+            [
+                "sd_qZOHqHvyD1ikeojM"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qZOHqHvyD1ikeojM",
+        "type": "Navigation",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/Account Management",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_qZOHqHvyD1ikeojM",
+        "category": "Navigation",
+        "x": 665,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_K3u7M8kehxbDoBjf",
+        "type": "PageStart",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "get doc id",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getDocId",
+        "category": "General",
+        "x": 65,
+        "y": 320,
+        "wires": [
+            [
+                "sd_9ImWXwHwlNMRhfE8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_zVQThDpovVigGhjw",
+        "type": "PageStart",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "disable",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "disable",
+        "category": "General",
+        "x": 65,
+        "y": 520,
+        "wires": [
+            [
+                "sd_SBptohUjPXKZRm5S"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_SBptohUjPXKZRm5S",
+        "type": "Script",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "if(page.userData.status == 'pending'){\n page.disabled = true;\n}\nelse{\n    page.disabled = false\n}",
+        "functionName": "sd_SBptohUjPXKZRm5S",
+        "category": "Function",
+        "x": 225,
+        "y": 520,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_eZd6QxMBhnbMcqXf",
+        "type": "PageStart",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "get doc address",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getDocAddress",
+        "category": "General",
+        "x": 65,
+        "y": 420,
+        "wires": [
+            [
+                "sd_oqp24qj11QzyCeaU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "selectedAccountComponent"
+    },
+    {
+        "id": "sd_lPw34e7qulELufJc",
+        "type": "Script",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdUrl + `download_ID/${page.userData.email}`;\npage.image = page.sanitizer.bypassSecurityTrustHtml(bh.url)\n\n\nconsole.log(bh.url)\n\npage.showImage = true\n\nwindow.open('/file', '_blank');",
+        "functionName": "sd_lPw34e7qulELufJc",
+        "category": "Function",
+        "x": 285,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_9ImWXwHwlNMRhfE8",
+        "type": "Environment",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_9ImWXwHwlNMRhfE8",
+        "category": "General",
+        "x": 185,
+        "y": 320,
+        "wires": [
+            [
+                "sd_lPw34e7qulELufJc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_oqp24qj11QzyCeaU",
+        "type": "Environment",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_oqp24qj11QzyCeaU",
+        "category": "General",
+        "x": 185,
+        "y": 420,
+        "wires": [
+            [
+                "sd_6FwgnIhqGRYao15L"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6FwgnIhqGRYao15L",
+        "type": "Script",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdUrl + `download-residence/${page.userData.email}`;\npage.image = page.sanitizer.bypassSecurityTrustHtml(bh.url)\n\n\nconsole.log(bh.url)\n\npage.showImage = true\n\nwindow.open('/open_proof', '_blank');",
+        "functionName": "sd_6FwgnIhqGRYao15L",
+        "category": "Function",
+        "x": 285,
+        "y": 420,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Fv3qmbMaRPtyBEe3",
+        "type": "UseDependency",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "DomSanitizer",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "sanitizer"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/platform-browser",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_Fv3qmbMaRPtyBEe3",
+        "category": "Function",
+        "x": 265,
+        "y": 60,
+        "wires": [
+            [
+                "sd_PusFvhk8A8TLr0It"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_g1aU6GcFdfmFLfL3",
+        "type": "Environment",
+        "z": "sd_CUdG72L76nFuQSLQ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_g1aU6GcFdfmFLfL3",
+        "category": "General",
+        "x": 465,
+        "y": 60,
+        "wires": [
+            [
+                "sd_IkUSiGaxwOxOMbuB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "selectedAccountComponent",
+        "generated": true
+    }
+]
